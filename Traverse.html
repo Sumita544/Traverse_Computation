@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traverse</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles */
+        .transparent-box {
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #003060;
+        }
+
+        /* Hide the additional content initially */
+        #more-content {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="ku-logo.jpeg" alt="Kathmandu University Logo" id="ku-logo">
+                <div class="logo-text">
+                    <h1>Kathmandu University</h1>
+                    <h2>Geomatics Engineering</h2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="Traverse.html">Traverse</a></li>
+                    <li><a href="clockwise.html">Clockwise Traverse</a></li>
+                    <li><a href="anticlockwise.html">Anticlockwise Traverse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="fixed-background">
+        <section class="transparent-box">
+            <h1>Traverse</h1>
+            <p>
+                Traversing is a method of surveying where a series of connected lines, known as traverse lines,
+                are established to determine the lengths and directions of these lines. These lines form a framework,
+                and the directions and lengths are measured using an angle measuring instrument (such as a theodolite 
+                or compass) and a tape or chain, respectively.
+            </p>
+            <a href="#" class="button" id="learn-more">Show More</a>
+            <div id="more-content">
+                <p>
+                    Traverse computations are essential in various engineering and construction projects, as they provide
+                    a basis for mapping, layout, and control. Advanced techniques like total stations and GPS are often
+                    used to increase the precision of traverse measurements.
+                   
+                </p>
+                <p>
+                    Type of Traverse:<br>
+                    Open Traverse:Such traverse which is geometrically as well as mathematicallty open.
+                    Suitable for surveying long, narrow strips of land, such as roads, canals, or coastlines.<br>
+                    Closed Traverse:Such traverse which is geometrically as well as mathematically closed.  Often used for surveys of large areas, 
+                    such as lakes, woods, or boundaries.<br>
+                    Link Traverse:Such traverse which is geometrically open mathematically close.
+                </p>
+                
+                <a href="index.html" class="button">Back to Welcome Page</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript to toggle the visibility of the additional content
+        document.getElementById('learn-more').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default link behavior
+            var moreContent = document.getElementById('more-content');
+            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                moreContent.style.display = 'block';
+                this.textContent = 'Show Less';
+            } else {
+                moreContent.style.display = 'none';
+                this.textContent = 'Learn More';
+            }
+        });
+    </script>
+
+</body>
+</html>

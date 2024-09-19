@@ -1,0 +1,367 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:whitesmoke;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-sizing:border-box;
+    justify-content:space-between;
+    height: 100px; /* Ensure the header has a consistent height */
+}
+
+/* Logo and text in header */
+.header-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex: 1;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Push navigation to the right */
+}
+
+#ku-logo {
+    width: 80px;
+    margin-right: 15px;
+}
+
+.logo-text h1, .logo-text h2 {
+    margin: 0;
+    color: black;
+}
+
+.logo-text h1 {
+    font-size: 1.5em;
+}
+
+.logo-text h2 {
+    font-size: 1em;
+}
+
+/* Navigation styles */
+nav {
+    margin-left: auto; /* Align navigation to the right */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffdd00;
+}
+
+/* Main content */
+main {
+    padding-top: 90px;
+    height: auto;
+    text-align: center;
+    color: #004080;
+}
+
+/* Welcome section with background image */
+.welcome-section {
+    margin: 0;
+    background-image: url('Traverse.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative; /* For the pseudo-element positioning */
+}
+
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Put the overlay behind text */
+}
+
+.welcome-section h1,
+.welcome-section p {
+    position: relative; /* Make text stay above the overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.welcome-section h1 {
+    font-size: 4.5em;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+
+.welcome-section p {
+    font-size: 1.8em;
+    max-width: 800px;
+    color: whitesmoke;
+    margin: 0 auto;
+}
+
+/* Form styles */
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #003060;
+}
+
+/* Results section */
+#results {
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+/* About Me section */
+#profile {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#profile img {
+    width: 400px;
+    border-radius: 50%;
+}
+
+#profile p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Navigation links for back */
+a {
+    display: block;
+    margin-top: 20px;
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: blue;
+}
+
+/* Additional Styles */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.content-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.content-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.content-box table td {
+    padding: 10px;
+}
+
+.content-box table td input {
+    width: calc(50% - 20px);
+    margin-right: 10px;
+}
+
+.content-box h3 {
+    margin-top: 0;
+}
+
+#results {
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.hidden {
+    display: none;
+}
+
+.navigation-links {
+    margin-top: 20px;
+}
+
+.navigation-links a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation-links a:hover {
+    color: whitesmoke;
+}
+
+.fixed-background {
+    background-image: url('Traverse.jpg');
+    background-size: cover; /* Ensures the background image covers the entire element */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    background-position: center center; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section Header styles */
+.section-header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    color:black; /* Dark color for text to contrast with the background */
+    padding: 20px 0; /* Add padding to give space around the heading */
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in the total width */
+    position: relative; /* Allows for absolute positioning of the heading if needed */
+}
+
+.section-header h2 {
+    margin: 0;               
+    font-size: 2.5em;        
+    width: 100%;    
+    padding: 0 20px;    
+    background:transparent;     
+}
+
+/* Main background for the traverse page */
+.fixed-background {
+    background-image: url('Traverse.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Transparent box styling */
+.transparent-box {
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    margin: 20px;
+}
+
+.transparent-box h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #004080; /* Matching color scheme */
+}
+
+.transparent-box p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #003060;
+}
+

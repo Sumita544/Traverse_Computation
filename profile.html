@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="ku-logo.jpeg" alt="Kathmandu University Logo" id="ku-logo">
+                <div class="logo-text">
+                    <h1>Kathmandu University</h1>
+                    <h2>Department of Geomatics Engineering</h2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="loadContent('profile.html')">Profile</a></li>
+                    <li><a href="#" onclick="loadContent('Traverse.html')"">Traverse</a></li>
+                    <li><a href="#" onclick="loadContent('clockwise.html')">Clockwise Traverse</a></li>
+                    <li><a href="#" onclick="loadContent('anticlockwise.html')">Anticlockwise Traverse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="profile">
+            <h2>Profile</h2>
+            <img src="sumita.jpg" alt="My Photo" id="my-photo">
+            <p>
+                I am Sumita Tamang, a hardworking student of Geomatics Engineering at Kathmandu University.
+                This website showcases my work, a traverse computation form design to compute the coordinates 
+                of the unknown stations using known stations. I am here to apply my learning and share practical solutions in the field of
+                 geomatics. Thank you for visiting!!
+            </p>
+            <a href="#" onclick="loadContent('index.html')">Back to Welcome</a>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clockwise Traverse Computation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS to ensure no overlap with header */
+        main {
+            padding-top: 120px; /* Adjust this value if necessary */
+            /* Make sure it is greater than or equal to the height of the header */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="ku-logo.jpeg" alt="Kathmandu University Logo" id="ku-logo">
+                <div class="logo-text">
+                    <h1>Kathmandu University</h1>
+                    <h2>Department of Geomatics Engineering</h2>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="loadContent('aboutme.html')">Profile</a></li>
+                    <li><a href="#" onclick="loadContent('Traverse.html')"">Traverse</a></li>
+                    <li><a href="#" onclick="loadContent('clockwise.html')">Clockwise Traverse</a></li>
+                    <li><a href="#" onclick="loadContent('anticlockwise.html')">Anticlockwise Traverse</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="fixed-background">
+        <section id="traverse-computation">
+            <header class="section-header">
+                <h2>Clockwise Traverse Computation</h2>
+            </header>
+
+            <div class="content-container">
+                <!-- Coordinates Input -->
+                <div class="content-box">
+                    <h3>Known Stations</h3>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="myknownX1">Enter (X,Y) of known station 1:</label><br>
+                                <input type="number" id="myknownX1" placeholder="X1:">
+                                <input type="number" id="myknownY1" placeholder="Y1:">
+                            </td>
+                            <td>
+                                <label for="myknownX2">Enter (X,Y) of known station 2:</label><br>
+                                <input type="number" id="myknownX2" placeholder="X2:">
+                                <input type="number" id="myknownY2" placeholder="Y2:">
+                            </td>
+                        </tr>
+                    </table>
+                    <button id="bearing">Calculate Bearing</button>
+                    <p id="bearingresult"></p>
+                </div>
+
+                <!-- Angles Input -->
+                <div class="content-box">
+                    <h3>Angle Computation</h3>
+                    <label for="myinputnumber1">Enter Number of Angles:</label>
+                    <input type="number" id="myinputnumber1" value="0">
+                    <button id="submitbutton1">Submit</button>
+                    <p id="nresult"></p>
+                    <div id="inputboxAngles"></div>
+                </div>
+
+                <!-- Results Display -->
+                <div id="results" class="content-box hidden">
+                    <h3>Results</h3>
+                    <!-- Results will be dynamically added here -->
+                </div>
+
+                <div class="navigation-links">
+                    <a href="index.html">Back to Welcome</a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="clockwise.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
